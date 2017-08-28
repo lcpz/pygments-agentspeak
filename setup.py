@@ -4,9 +4,9 @@ from setuptools import setup, find_packages
 
 setup (
   name='pygments-agentspeak',
-  version=0.1,
-  description='Pygments lexer for Jason AgentSpeak.',
-  long_description=open('README.md').read(),
+  version=1.0,
+  description='Pygments lexer for Jason/JaCaMo AgentSpeak.',
+  long_description=open('README.rst').read(),
   keywords='pygments agentspeak jason jacamo lexer',
   license='BSD',
   packages=find_packages(),
@@ -14,8 +14,12 @@ setup (
   entry_points =
   """
   [pygments.lexers]
-  agentspeak = agentspeaklexer:AgentSpeakLexer
-  """
+  jason = lexers:JasonAgentLexer
+  jasonproject = lexers:JasonProjectLexer
+  jacamoproject = lexers:JaCaMoProjectLexer
+  [pygments.styles]
+  jacamo = styles:JaCaMoStyle
+  """,
   classifiers=[
     'Environment :: Plugins',
     'Intended Audience :: Developers',
@@ -23,6 +27,6 @@ setup (
     'Operating System :: OS Independent',
     'Programming Language :: Python',
     'Programming Language :: Python :: 3',
-    'Topic :: Software Development :: Libraries :: Python Modules',
+    'Topic :: Software Development :: Libraries :: Python Modules'
   ]
 )
