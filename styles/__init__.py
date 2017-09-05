@@ -36,7 +36,7 @@ class JaCaMoStyle(Style):
 
         Operator         : '#000000',
         Operator.Word    : 'bold #000000',
-        Operator.Logical : '#DD0000',
+        Operator.Logical : 'bold #000000',
 
         Punctuation      : '#000000',
 

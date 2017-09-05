@@ -77,17 +77,17 @@ class JasonAgentLexer(RegexLexer):
             # beliefs
             (r"~?[a-z]\w+=\..", String.Atom),
             (r'(-|\+|-\+)[a-z]\w+', Name.Function),
-            (r'\?[a-z]\w*', Name.Class),
+            (r'\?\w+', Name.Class),
 
             # plans
-            (r'[\-|\+]?!\w*:?:?\w*', Name.Class),
+            (r'[\-|\+]?!?!\w*:?:?\w*', Name.Class),
 
             # puntuactions
             (r'[\[\](){}|.,:;_?]', Punctuation),
             (r':-|<-|\-\+', Punctuation),
 
             # operators
-            (r'(<|>|=<|>=|==|\\==|=|/|\*|\+|\-|\!)', Operator),
+            (r'(<|>|=<|>=|==|\\==|=|/|\*|\+|\-)', Operator),
             (r'(if|else|else if|while|for|cut|not|mod|div)\b', Operator.Word),
             (r'(&|\|)', Operator.Logical),
 

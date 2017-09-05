@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup (
   name='pygments-agentspeak',
-  version=1.0,
+  version=1.1,
   description='Pygments lexer for Jason/JaCaMo AgentSpeak.',
   long_description=open('README.rst').read(),
   keywords='pygments agentspeak jason jacamo lexer',
