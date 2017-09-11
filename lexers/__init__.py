@@ -45,11 +45,11 @@ class JasonAgentLexer(RegexLexer):
         'sendOffer', 'adjustOffer', 'providerInitialised'
     )
 
-    flags = re.UNICODE | re.MULTILINE
+    flags = re.MULTILINE | re.DOTALL | re.UNICODE
 
     tokens = {
         'root': [
-            # Java-like comments
+            (r'[^\S\n]+', Text),
             (r'//.*?\n', Comment.Single),
             (r'/\*.*?\*/', Comment.Multiline),
 
@@ -76,11 +76,11 @@ class JasonAgentLexer(RegexLexer):
 
             # beliefs
             (r"~?[a-z]\w+=\..", String.Atom),
-            (r'(-|\+|-\+)[a-z]\w+', Name.Function),
-            (r'\?\w+', Name.Class),
+            (r'(-|\+|-\+):?:?\w+', Name.Function),
+            (r'\?\w*:?:?\w+', Name.Class),
 
             # plans
-            (r'[\-|\+]?!?!\w*:?:?\w*', Name.Class),
+            (r'[\-|\+]?!?!\w*:?:?\w+', Name.Class),
 
             # puntuactions
             (r'[\[\](){}|.,:;_?]', Punctuation),
