@@ -19,7 +19,7 @@ With PyPI: ::
 
 From GitHub: ::
 
-    $ git clone https://github.com/copycat-killer/pygments-agentspeak.git
+    $ git clone https://github.com/lcpz/pygments-agentspeak.git
     $ cd pygments-agentspeak
     $ sudo pip3 install .
 
@@ -27,7 +27,7 @@ From GitHub: ::
 Usage
 -----
 
-Just define ``jason``, ``jasonproject`` or ``jacamoproject`` as the language to be used.
+Define ``jason``, ``jasonproject`` or ``jacamoproject`` as the language to be used.
 
 You can also use ``jacamo`` as style.
 
